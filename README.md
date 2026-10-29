@@ -1,5 +1,4 @@
 # Terminal_RussianRoulette
-### This project is still in development
 
 A simple Russian roulette game written in BASH, so you can play it non-stop, even in boring moments.
 

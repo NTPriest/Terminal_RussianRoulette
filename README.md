@@ -21,5 +21,9 @@ execute:
 
 ```./russRevol.sh ```
 
+or add to path to execute script from anywhere:
+
+``` export PATH="$PATH:/path/to/folder" ```
+
 ## Disclaimer
 All ```revolver<X>.mp3``` and *.txt files should be located in the same folder where ``` russRevol.sh``` is.

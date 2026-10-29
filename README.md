@@ -11,7 +11,6 @@ Also you can improve this script and make your own modifications
 - characteristic action sounds (.mp3)
 - ASCII graphics
 - round counting
-- scoring
 
 ## "Installation"
 add x permission:

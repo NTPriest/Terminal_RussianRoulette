@@ -9,8 +9,6 @@ Also you can improve this script and make your own modifications
 - spinning barrel
 - skip shoot
 - characteristic action sounds (.mp3)
-
-## To be added:
 - ASCII graphics
 - round counting
 - scoring
@@ -25,4 +23,4 @@ execute:
 ```./russRevol.sh ```
 
 ## Disclaimer
-All ```revolver<X>.mp3``` files should be located in the same folder where ``` russRevol.sh``` is.
+All ```revolver<X>.mp3``` and *.txt files should be located in the same folder where ``` russRevol.sh``` is.

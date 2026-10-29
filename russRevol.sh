@@ -4,6 +4,7 @@
 fail="\033[31;1m"
 info="\033[1;36m"
 NC="\033[0m"
+round_count=0
 
 validation() {
     local blt=$1
@@ -83,15 +84,18 @@ shoot(){
                 case $iterate in
                     "${fail}X${NC}" )
                         #printf "%b\n" "${chamber[*]}"
+                        cat bang.txt
                         play revolverShoot.mp3 &> /dev/null
                         printf "\nClick*, BOOM..... you just died!\n\n"
                         while true; do
                             echo "Game over"
                             printf "\nPlay Again?\n [Y]es, [N]o: "
                             read -r again
+
                             
                             againU=${again^^}
                                 if [[ "$againU" == "Y" ]]; then
+                                    round_count=0
                                     return 0
                                 elif [[ "$againU" == "N" ]]; then
                                     return 1
@@ -102,6 +106,8 @@ shoot(){
                         done
                         ;;
                     "0" )
+                        ((round_count++))
+                        printf "Round: ${round_count}"
                         play revolerClickEmpty.mp3 &> /dev/null
                         printf "\nClick, Uff...empty\n"
                         
@@ -115,11 +121,10 @@ shoot(){
     done
 }
 
-echo "-Welcome to Russian_Roullete v1 writen in bash-"
+cat welcome.txt
 
-echo -n "Provide amounts of bullets: "  
+printf "\n\nProvide amounts of bullets: "  
 read -r bullets  
-
 
 validation
 new_game
@@ -131,9 +136,13 @@ while true; do
     if [[ $status -eq 1 ]]; then
         break
     fi
-
     new_game
 done
+
+
+
+
+
 
 
 
